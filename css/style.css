@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.rientro{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+header a{
+  color: #b5b6b7;
+}
+
+header a:hover {
+  color: #191c1f;
+}
+#header-top{
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+  background-color: #f3f4f5;
+}
+
+#header-top ul:first-child li:first-child a{
+  color: #191c1f;
+}
+
+#header-top ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+#header-main-nav{
+  display: flex;
+  height: 90px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+#header-main-nav .logo-wrapper{
+  display: flex;
+  align-items: center;
+  width: 15%;
+}
+
+#header-main-nav .logo-wrapper img{
+  width: 100%;
+  padding-left: 0px 10px;
+}
+
+#header-main-nav .links-wrapper{
+  width: 75%;
+  padding-right: 12%;
+}
+
+#header-main-nav .links-wrapper ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+#header-main-nav .button-wrapper{
+  width: 20%;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.button{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+}
