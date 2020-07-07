@@ -1,4 +1,4 @@
-/* regole generali */
+/* REGOLE GENERALI */
 
 *{
   margin: 0;
@@ -8,8 +8,15 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+  color: #b5b6b7;
 }
 
+h1{
+  margin: 15px 0;
+  color: #000;
+  font-weight: 800;
+  font-size: 70px;
+}
 
 a{
   text-decoration: none;
@@ -24,7 +31,31 @@ ul{
   padding-right: 10%;
 }
 
-/* Header */
+/* buttons */
+
+.button{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover{
+  opacity: .8;
+}
+
+.button a{
+  color: #fff;
+}
+
+.button a:hover{
+  color: #fff;
+}
+
+/* HEADER */
 
 header a{
   color: #b5b6b7;
@@ -34,7 +65,7 @@ header a:hover {
   color: #191c1f;
 }
 
-/* Header top */
+/* HEADER TOP */
 
 #header-top{
   display: flex;
@@ -52,7 +83,7 @@ header a:hover {
   padding: 10px;
 }
 
-/* barra di navigazione principale */
+/* HEADER NAV - BARRA DI NAVIGAZIONE PRINCIPALE */
 
 #header-main-nav{
   display: flex;
@@ -93,15 +124,6 @@ header a:hover {
   text-align: right;
 }
 
-.button{
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: bold;
-  background-color: black;
-  color: #fff;
-}
-
 /* dropdowns */
 
 .main-dropdown{
@@ -111,6 +133,8 @@ header a:hover {
 .main-dropdown-content{
   display: none;
   position: absolute;
+  z-index: 999;
+  background-color: #fff;
   white-space: nowrap;
   /* proprietà magica che non fa andare a capo quindi il dropdown-content prende la width a seconda del contenuto. altrimenti prende la width dall'elemento li che lo contiente e manda tutti i li del dropdown-content a capo. si portebbe anche dare una width fissa ma così è più elegante */
   top: 45px;
@@ -128,4 +152,102 @@ header a:hover {
 .inactive:hover a{
   cursor: default;
   color: #b5b6b7;
+}
+
+/* JUMBOTRON */
+
+#jumbotron{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 70px;
+}
+
+#jumbotron>div{
+  width: 50%;
+}
+
+/* jumbotron left */
+
+#jumbotron .jumbo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+/* miniform */
+
+#jumbotron .miniform{
+  position: relative;
+  padding: 30px 0 20px;
+}
+
+#jumbotron .miniform input[name="prefisso"]{
+  width: 8%;
+}
+
+#jumbotron .miniform [name="numerocel"]{
+  width: 35%;
+  margin-right: 20px;
+}
+
+#jumbotron input{
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  border-bottom: 1px solid  #b5b6b7;
+}
+
+#jumbotron input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b5b6b7;
+  opacity: 1; /* Firefox */
+}
+
+#jumbotron input::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+#jumbotron input:focus{
+  outline: none; /* toglie il bordo evidenziato quando c'è il focus sull'input (ci stai scrivendo dentro) */
+}
+
+
+#jumbotron .miniform .button{
+  padding: 10px 30px;
+  background-color: #47494c;
+  color: #77797a;
+  cursor: not-allowed;
+}
+
+#jumbotron .miniform label[for="numerocel"]{
+  display: none;
+  position: absolute;
+  left: 9%;
+  top: 20px;
+  font-size: 15px;
+  color: blue;
+}
+
+/* ultimo div del jumbo text */
+
+#jumbotron .jumbo-text>div:last-child{
+  color: #000;
+  font-size: 15px;
+}
+
+#jumbotron .jumbo-text>div:last-child i{
+  margin-right: 10px;
+}
+
+/* jumbotron right */
+
+#jumbotron>div:last-child{
+  text-align: center;
+}
+
+#jumbotron>div:last-child img{
+  width: 70%;
+  vertical-align: middle;
 }
