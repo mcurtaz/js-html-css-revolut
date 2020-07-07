@@ -1,3 +1,5 @@
+/* regole generali */
+
 *{
   margin: 0;
   padding: 0;
@@ -22,6 +24,8 @@ ul{
   padding-right: 10%;
 }
 
+/* Header */
+
 header a{
   color: #b5b6b7;
 }
@@ -29,32 +33,36 @@ header a{
 header a:hover {
   color: #191c1f;
 }
+
+/* Header top */
+
 #header-top{
   display: flex;
   justify-content: space-between;
-  line-height: 40px;
+  line-height: 40px; /* altezza fissa */
   background-color: #f3f4f5;
 }
 
-#header-top ul:first-child li:first-child a{
+#header-top ul:first-child li:first-child a{ /* il primo link "personale" ha un colore diverso */
   color: #191c1f;
 }
 
-#header-top .links-wrapper>ul li, #header-top ul li {
+#header-top ul li {
   display: inline-block;
   padding: 10px;
 }
 
+/* barra di navigazione principale */
+
 #header-main-nav{
   display: flex;
-  height: 50px;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  height: 50px; /* altezza fissa. con line-height 50px centro i link in verticale */
+  margin: 40px 0 10px;
 }
 
 #header-main-nav .logo-wrapper{
   display: flex;
-  align-items: center;
+  align-items: center; /* centratura del logo in vertical */
   width: 12%;
   padding-left: 0px 10px;
 }
@@ -72,12 +80,10 @@ header a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
 }
 
 #header-main-nav .links-wrapper>ul li{
-  height: 100%;
-  line-height: 50px;
+  line-height: 50px; /* altezza del li facilita l'hover e centra i link in verticale */
   padding: 0 20px;
 }
 
@@ -105,16 +111,17 @@ header a:hover {
 .main-dropdown-content{
   display: none;
   position: absolute;
-  min-width: 200px;
+  white-space: nowrap;
+  /* proprietà magica che non fa andare a capo quindi il dropdown-content prende la width a seconda del contenuto. altrimenti prende la width dall'elemento li che lo contiente e manda tutti i li del dropdown-content a capo. si portebbe anche dare una width fissa ma così è più elegante */
   top: 45px;
-  left: -20px;
+  left: 0;
   padding: 10px;
   border-radius: 8px;
-  box-shadow:  0px 0px 8px 4px #b5b6b7;
+  box-shadow:  0px 0px 15px 2px rgba(0, 0, 0, 0.15);
 }
 
 #header-main-nav .main-dropdown-content > ul > li{
-  padding: 10px;
+  padding: 15px 10px;
   line-height: normal;
 }
 
