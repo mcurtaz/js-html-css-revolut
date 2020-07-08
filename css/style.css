@@ -20,6 +20,11 @@ h1{
 
 a{
   text-decoration: none;
+  color: #b5b6b7;
+}
+
+a:hover {
+  color: #191c1f;
 }
 
 ul{
@@ -57,13 +62,6 @@ ul{
 
 /* HEADER */
 
-header a{
-  color: #b5b6b7;
-}
-
-header a:hover {
-  color: #191c1f;
-}
 
 /* HEADER TOP */
 
@@ -74,7 +72,7 @@ header a:hover {
   background-color: #f3f4f5;
 }
 
-#header-top ul:first-child li:first-child a{ /* il primo link "personale" ha un colore diverso */
+.top-links-right li:first-child a{ /* il primo link "personale" ha un colore diverso */
   color: #191c1f;
 }
 
@@ -95,7 +93,7 @@ header a:hover {
   display: flex;
   align-items: center; /* centratura del logo in vertical */
   width: 12%;
-  padding-left: 0px 10px;
+  padding-left: 10px;
 }
 
 #header-main-nav .logo-wrapper img{
@@ -275,6 +273,62 @@ header a:hover {
   margin-top: 7px;
 }
 
+/* ---------------  HAMBURGER MENU XS --------------------- */
+
+#hamburger-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 900;
+}
+
+#hamburger-top-bar{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f4f5;
+}
+
+#hamburger-top-bar, .hamburger-links-wrapper{
+  padding: 10px;
+}
+
+#hamburger-top-bar ul li{
+  display: inline-block;
+  padding: 10px;
+}
+
+#hamburger-top-bar i{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.hamburger-links{
+  padding: 10px;
+}
+
+.hamburger-links .links-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hamburger-links>ul{
+  display: none;
+  padding: 10px 0;
+}
+
+.hamburger-links>ul li{
+  padding: 10px 0;
+}
+
+/* classe assegnata con js a menu aperti */
+.text-black{
+  color: #000;
+}
 
 @media all and (max-width: 1400px) {
 
@@ -306,7 +360,7 @@ header a:hover {
   /* HEADER NAV PRINCIPALE */
 
   #header-main-nav{
-    margin: 10px 0 10px;
+    margin: 0;
   }
 
   #header-main-nav .logo-wrapper{
@@ -321,6 +375,7 @@ header a:hover {
   #header-main-nav .button-wrapper{
     width: 50%;
     line-height: 50px;
+    padding-right: 0;
     text-align: right;
     color: #000;
   }
