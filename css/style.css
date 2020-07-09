@@ -287,7 +287,7 @@ ul{
 
 #hamburger-menu{
   display: none;
-  position: absolute;
+  position: fixed; /* funziona anche position absolute ma con position absolute puoi scrollare la restante pagina sotto. invece con position fixed la pagina scrolla comunque ma è sempre coperta dal menu */
   top: 0;
   left: 0;
   width: 100vw;
