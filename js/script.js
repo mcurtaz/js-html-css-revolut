@@ -58,13 +58,13 @@ $(document).ready(function(){
 
   // Gestione delle navbar superiori allo scroll
 
-  $(window).scroll( function(){
+  $(window).scroll( function(){ // event listener su lo scroll della finestra (si può fare anche uno scroll su un elemento)
 
-    if ($(window).scrollTop() > 40) {
+    if ($(window).scrollTop() > 60) { // quando la finestra scrolla dall'alto 60 px (che è l'altezza della barra superiore grigia compresa di 10px di padding sopra e sotto) aggiunge una classe che da fixed alla barra sotto.
       $("#header-main-nav").addClass("scroll-fixed");
     }
 
-    if ($(window).scrollTop() < 40) {
+    if ($(window).scrollTop() < 60) { // al contrario toglie la classe
       $("#header-main-nav").removeClass("scroll-fixed");
     }
 
