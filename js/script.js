@@ -55,4 +55,22 @@ $(document).ready(function(){
 
   });
 
+
+  // Gestione delle navbar superiori allo scroll
+
+  $(window).scroll( function(){
+
+    if ($(window).scrollTop() > 40) {
+      $("#header-main-nav").addClass("scroll-fixed");
+    }
+
+    if ($(window).scrollTop() < 40) {
+      $("#header-main-nav").removeClass("scroll-fixed");
+    }
+
+
+
+
+  });
+
 });

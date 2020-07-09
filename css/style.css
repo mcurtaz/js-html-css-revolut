@@ -83,10 +83,20 @@ ul{
 
 /* HEADER NAV - BARRA DI NAVIGAZIONE PRINCIPALE */
 
+/* classe di appoggio inserita con js allo scroll */
+#header-main-nav.scroll-fixed{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow:  0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  z-index: 900;
+  padding: 10px 0;
+}
 #header-main-nav{
   display: flex;
-  height: 50px; /* altezza fissa. con line-height 50px centro i link in verticale */
-  margin: 40px 0 10px;
+  padding: 40px 0 10px;
+  background-color: #fff;
 }
 
 #header-main-nav .logo-wrapper{
